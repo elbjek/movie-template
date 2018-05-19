@@ -1,33 +1,8 @@
 
-// const app = new Vue({
-// 	el:'#app',
-// 	data:{
-// 		term:'',
-// 		results:[],
-// 		noResults:false,
-// 		searching:false
-// 	},
-// 	methods:{
-// 		search:function() {
-// 			this.searching = true;
-// 			fetch(`http://itunes.apple.com/search?term=${encodeURIComponent(this.term)}&limit=5&media=music`)
-// 			.then(res => res.json())
-// 			.then(res => {
-
-// 				this.results = res.results;
-//         this.searching = false;
-//         this.noResults = this.results.length === 0;
-// 			});
-// 		}
-// 	}
-// });
-
-// http://www.omdbapi.com/?s=${encodeURIComponent(this.term)}&apikey=e8ed16e8
-
-$('.single-item-rtl').slick({
-  rtl: true
-});
-	
+Vue.component('card-template',{
+  props:['card'],
+  template: '<p>{{card.Title}}</p>'
+})
 
 var app = new Vue({
   el:'#app',
@@ -65,5 +40,4 @@ var app = new Vue({
 // http://www.omdbapi.com/?t=${encodeURIComponent(this.term)}&apikey=e8ed16e8
 // http://img.omdbapi.com/t=blade&apikey=e8ed16e8
 
-
-// slider
+x
