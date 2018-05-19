@@ -1,0 +1,69 @@
+body{
+    background-color:#e2e2e2;
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+nav {
+    text-align: right;
+    background-color: #fffcfc;
+}
+nav ul{
+    padding:20px 10px;
+    width:1440px;
+    margin:0 auto;
+}
+nav ul li{
+    display:inline;
+
+    list-style-type: none;
+}
+nav ul li a{
+    padding:20px 10px;
+    text-decoration: none;
+    font-weight: bolder;
+    color:#3d3d3d;
+}
+nav ul li a:hover{
+    background-color: #f44b42;
+    color:#fffcfc;
+}
+
+
+
+/* card  */
+.submit{
+    background-color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.submit>input{
+    height:40px;
+    background-color: gray;
+    border:none;
+    border-radius: 10px;
+    padding:10px;
+    width:500px;
+    color:white;
+    font-size: 12px;
+    
+}
+::placeholder { 
+    color: white;
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+button{
+    height:40px;
+    color:white;
+    font-weight: bolder;
+    width:100px;
+    border-radius: 50px;
+    background-color: #f44b42;
+    margin-left:10px;
+    border:none;
+    cursor: pointer;
+}
