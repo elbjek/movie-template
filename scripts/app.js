@@ -40,4 +40,3 @@ var app = new Vue({
 // http://www.omdbapi.com/?t=${encodeURIComponent(this.term)}&apikey=e8ed16e8
 // http://img.omdbapi.com/t=blade&apikey=e8ed16e8
 
-x
