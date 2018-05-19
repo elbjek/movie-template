@@ -24,6 +24,10 @@
 
 // http://www.omdbapi.com/?s=${encodeURIComponent(this.term)}&apikey=e8ed16e8
 
+$('.single-item-rtl').slick({
+  rtl: true
+});
+	
 
 var app = new Vue({
   el:'#app',
