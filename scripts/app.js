@@ -35,8 +35,7 @@ var app = new Vue({
       request.send();
       document.querySelector("input").style.width="500px";
       document.querySelector("input").style.height="40px";
-      
-      
+
     },
     spread:function(){
       document.querySelector("input").style.width="700px";
