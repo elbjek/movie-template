@@ -5,8 +5,8 @@
 	<title>Vue JS</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
-
-				
+	
+	
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,32 +24,40 @@
 					<a href="">tv series</a>
 				</li>
 				<li>
-						<a href="">cartoons</a>
-					</li>
+					<a href="">cartoons</a>
+				</li>
 			</ul>
 		</nav>
+
+<div class="hero">
+
+
+		<img src="img/three.jpg" alt="">
+
+</div>
+
+
 		<div class="submit">
 			<input v-model="item" @click="spread" type="search" placeholder="Search movie here">
 			<button @click="search"> Search</button>
 		</div>
-		
-		<div class="results" v-for="result in results">
-		{{result.Title}}
-		{{result[1].Title}}
-
 	
+			<div class="cards" id="cards">
 
-
-		</div>
-
+						<card-template v-for="result in results"
+				v-bind:card="result"
+				v-bind:key="result.Title"
+				></card-template>
 		
+			</div>
+	
 		
-		<div v-if="searching">
-			<p>Searching...</p>
+		<div v-if="noresult">
+			<p>No results..Please try again.</p>
 		</div>
-			
+		
 	</div>
-
+	
 	<script src="https://unpkg.com/vue"></script>
 	<script src="scripts/app.js"></script>
 </body>
