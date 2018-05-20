@@ -12,47 +12,20 @@
 <body>
 	
 	<div id="app" >
-		<nav>
-			<ul>
-				<li>
-					<a href="">home</a>
-				</li>
-				<li>
-					<a href="">movies</a>
-				</li>
-				<li>
-					<a href="">tv series</a>
-				</li>
-				<li>
-					<a href="">cartoons</a>
-				</li>
-			</ul>
-		</nav>
-
-<div class="hero">
-
-
-		<img src="img/three.jpg" alt="">
-
-</div>
-
-
 		<div class="submit">
-			<input v-model="item" @click="spread" type="search" placeholder="Search movie here">
+			<input v-model="item" @click="spread" type="search" placeholder="Search here">
 			<button @click="search"> Search</button>
 		</div>
-	
-			<div class="cards" id="cards">
-
-						<card-template v-for="result in results"
-				v-bind:card="result"
-				v-bind:key="result.Title"
-				></card-template>
 		
-			</div>
-	
+		<div class="cards" id="cards">
+			<card-template v-for="result in results"
+			v-bind:card="result"
+			v-bind:key="result.Title"
+			></card-template>	
+		</div>
 		
-		<div v-if="noresult">
+		
+		<div v-if="noresult" class="noresult">
 			<p>No results..Please try again.</p>
 		</div>
 		

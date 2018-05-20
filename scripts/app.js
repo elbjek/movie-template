@@ -12,29 +12,30 @@ var app = new Vue({
     noresult:false
   },
   methods:{
-
+    
     search:function(){ 
+   
       var URL = 'http://www.omdbapi.com/?s='+encodeURIComponent(this.item)+'&apikey=e8ed16e8';  
       var request = new XMLHttpRequest();
       request.open('GET', URL);
-      request.onreadystatechange = function(){
-
+      request.onload = function(){
+        
         if(request.readyState === XMLHttpRequest.DONE){
+          
           if(this.status === 200){
             app.results = JSON.parse(this.response);
             app.results = app.results.Search;
-            document.getElementById("cards").style.display="flex";
+            document.getElementById("cards").style.display="flex";     
           } 
-          if(this.item == null){
-            app.noresult=true;
+          if(this.item = ''){
+            noresult = true;
           }
-    
         }
       }
       request.send();
       document.querySelector("input").style.width="500px";
       document.querySelector("input").style.height="40px";
-     
+      
       
     },
     spread:function(){
@@ -42,18 +43,12 @@ var app = new Vue({
       document.querySelector("input").style.height="50px";
       document.querySelector("input").style.transition="0.6s ease-in-out";
     },
-    scroll:function(){
-
-    }
-
+    slide:function(){
+      
     }
     
-
+  }
+  
+  
 })
-
-
-
-// http://www.omdbapi.com/?s='+encodeURIComponent(this.item)+'&apikey=e8ed16e8'
-// http://www.omdbapi.com/?t=${encodeURIComponent(this.term)}&apikey=e8ed16e8
-// http://img.omdbapi.com/t=blade&apikey=e8ed16e8
 
